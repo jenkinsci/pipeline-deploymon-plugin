@@ -59,7 +59,7 @@ import hudson.security.ACL;
 import hudson.util.ListBoxModel;
 import net.sf.json.JSONSerializer;
 
-public class NotifyDeploymentStep extends AbstractStepImpl {
+public class NotifyDeploymonStep extends AbstractStepImpl {
 	
 	private final String project;
 	private final String service;
@@ -69,7 +69,7 @@ public class NotifyDeploymentStep extends AbstractStepImpl {
 	private String url;
 	
 	@DataBoundConstructor
-	public NotifyDeploymentStep(String credentials, String project, String service, String stage, String version) {
+	public NotifyDeploymonStep(String credentials, String project, String service, String stage, String version) {
 		this.credentials = credentials;
 		this.project = project;
 		this.service = service;
@@ -110,12 +110,12 @@ public class NotifyDeploymentStep extends AbstractStepImpl {
 	public static class DescriptorImpl extends AbstractStepDescriptorImpl {
 		
 		public DescriptorImpl() {
-			super(NotifyDeploymentStep.Execution.class);
+			super(NotifyDeploymonStep.Execution.class);
 		}
 		
 		@Override
 		public String getFunctionName() {
-			return "notifyDeployment";
+			return "notifyDeploymon";
 		}
 		
 		@Override
@@ -151,7 +151,7 @@ public class NotifyDeploymentStep extends AbstractStepImpl {
 		private static final String ENV_BUILD_URL = "BUILD_URL";
 		
 		@Inject
-		private transient NotifyDeploymentStep step;
+		private transient NotifyDeploymonStep step;
 		@StepContextParameter
 		private transient EnvVars envVars;
 		@StepContextParameter

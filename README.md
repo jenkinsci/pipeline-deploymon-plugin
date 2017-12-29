@@ -10,12 +10,12 @@ This plugins adds Jenkins pipeline steps to interact with deploymon.io
 
 # Usage / Steps
 
-## notifyDeployment
+## notifyDeploymon
 
 Notify deploymon.io of the deployment of a new service version.
 
 ```
-notifyDeployment(credentials: 'deploymon-TestProject', project:'someProjectId', service: 'serviceName', stage: 'stageName', version: '1.0')
+notifyDeploymon(credentials: 'deploymon-TestProject', project:'someProjectId', service: 'serviceName', stage: 'stageName', version: '1.0')
 ```
 
 # Changelog
